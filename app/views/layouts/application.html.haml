@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title Backbone2
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "common"
+    = requirejs_include_tag "application"
+    :javascript
+      window.current_user = #{(current_user || User.new).to_json}
+      require.config({baseUrl: "/assets", urlArgs: "" + (new Date()).getTime() + "="})
+    = csrf_meta_tags
+  %body
+    #main
+
+

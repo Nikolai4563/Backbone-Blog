@@ -1,0 +1,12 @@
+<div class='post'>
+    <div class='post-head'>
+        <span class='post-date pull-right'> {{{dateFormat created_at}}}</span>
+        <span class='post-title'><b><a href='/post/{{id}}'>{{title}}</a></b></span>
+        <span class='post-author'> Author:  <b>{{user.name}}</b></span>
+
+
+    </div>
+    <div class='post-content'>{{description}}</div>
+    <div class='read_more'><a href='/post/{{id}}' class='btn btn-primary'>Read More</a></div>
+    <div class='post-footer'><span>Comments: {{comments_count}} <i class='glyphicon glyphicon-pencil'></i></span><span> Likes: {{likes_count}} <i class='glyphicon glyphicon-thumbs-up'></i></span></div>
+</div>

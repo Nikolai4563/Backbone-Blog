@@ -1,0 +1,16 @@
+<ul id='navigation' class="navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">Home</a>
+        <a class="navbar-brand" href="/post">New Post</a>
+    </div>
+
+    <p class ='pull-right auth'>
+        {{#if email}}
+            <a rel="nofollow" class="btn btn-primary" data-method="delete" href="/users/sign_out">Logout</a>
+            <a class="btn btn-primary" href="/users/edit">Edit</a>
+        {{else}}
+            <a class="btn btn-primary" href="/users/sign_in">Sign_in</a>
+            <a class="btn btn-primary" href="/users/sign_up">Registration</a>
+        {{/if}}
+    </p>
+</ul>
